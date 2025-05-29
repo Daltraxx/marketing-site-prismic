@@ -1,4 +1,6 @@
 import { createClient } from "@/prismicio";
+import { PrismicNextLink } from "@prismicio/next";
+import Link from "next/link";
 
 export default async function Footer() {
    const client = createClient();
@@ -7,7 +9,16 @@ export default async function Footer() {
 
    return (
       <footer>
-         Footer!
+         <Link href='/'>{settings.data.site_title}</Link>
+         <small className="block">©{new Date().getFullYear()}</small>
+         <ul>
+            {settings.data.navigation.map(({ link, label }) => (
+               <li key={label}>
+                  <PrismicNextLink field={link}>{label}</PrismicNextLink>
+               </li>
+            ))}
+         </ul>
+         
       </footer>
    );
 }
