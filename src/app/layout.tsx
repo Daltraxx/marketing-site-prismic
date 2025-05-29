@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { nunito, nunitoSans } from "./fonts";
 import clsx from "clsx";
+import { createClient } from "@/prismicio";
 
 export const metadata: Metadata = {
   title: "Create Next App",
