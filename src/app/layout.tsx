@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const page = await client.getSingle('settings');
  
   return {
-    title: page.data.site_title || 'Daltraxx Inc. Fallback Title',
+    title: page.data.site_title || 'Daltraxx Inc',
     description: page.data.meta_description || 'Daltraxx Inc. Marketing site',
     openGraph: {
       images: [page.data.og_image.url || '']
