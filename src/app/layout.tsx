@@ -19,6 +19,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
+import Header from "@/components/Header";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${clsx(nunito.variable, nunitoSans.variable)} antialiased`}>
       <body>
-        <header>Header!</header>
+        <Header />
         {children}
         <footer>Footer!</footer>
       </body>
