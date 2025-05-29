@@ -1,7 +1,11 @@
-export default function Header() {
+import { createClient } from "@/prismicio";
 
+export default async function Header() {
+   const client = createClient();
+
+  const settings = await client.getSingle('settings');
 
    return (
-      <header>Header!</header>
+      <header>{settings.data.meta_description}</header>
    );
 }
