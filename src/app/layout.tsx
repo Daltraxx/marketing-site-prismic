@@ -16,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${clsx(nunito.variable, nunitoSans.variable)} antialiased`}>
       <body>
+        <header>Header!</header>
         {children}
+        <footer>Footer!</footer>
       </body>
     </html>
   );
