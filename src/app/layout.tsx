@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-import { Nunito, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import { nunito, nunitoSans } from "./fonts";
 import clsx from "clsx";
-
-const nunito = Nunito({
-  variable: "--font-nunito",
-  subsets: ["latin"],
-  display: "swap"
-});
-
-const nunitoSans = Nunito_Sans({
-  variable: "--font-nunito-sans",
-  subsets: ["latin"],
-  display: "swap"
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${clsx(nunito.className, nunitoSans.className)} antialiased`}>
+    <html lang="en" className={`${clsx(nunito.variable, nunitoSans.variable)} antialiased`}>
       <body>
         {children}
       </body>

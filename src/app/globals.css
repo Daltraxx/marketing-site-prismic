@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
-:root {
-}
+/* :root {
+} */
 
-@theme inline {
+@theme {
+  --font-body: var(--font-nunito-sans);
+  --font-display: var(--font-nunito);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +15,6 @@
   }
 }
 
-body {
+/* body {
   
-}
+} */
