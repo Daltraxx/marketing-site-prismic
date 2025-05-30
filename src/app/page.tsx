@@ -1,10 +1,27 @@
-import Image from "next/image";
-import { nunitoSans } from "./fonts";
+import { type Metadata } from "next";
+import { notFound } from "next/navigation";
+import { asImageSrc } from "@prismicio/client";
+import { SliceZone } from "@prismicio/react";
 
-export default function Home() {
-  return (
-    <main>
-      <h1 className="text-5xl font-body font-bold">Hello World!!!</h1>
-    </main>
-  );
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const client = createClient();
+  const page = await client.getSingle("homepage").catch(() => notFound());
+
+  return {
+    title: page.data.meta_title,
+    description: page.data.meta_description,
+    openGraph: {
+      images: [{ url: asImageSrc(page.data.meta_image) ?? "" }],
+    },
+  };
+}
+
+export default async function Page() {
+  const client = createClient();
+  const page = await client.getSingle("homepage").catch(() => notFound());
+
+  return <SliceZone slices={page.data.slices} components={components} />;
 }
