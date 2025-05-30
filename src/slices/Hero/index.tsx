@@ -19,7 +19,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       className="px-4 py-10 md:py-14 md:px-6 lg:py-16"
     >
       <div className="mx-auto w-full max-w-6xl">
-        <div>
+        <div className="grid grid-cols-1 place-items-center text-center">
           <PrismicRichText field={slice.primary.heading} components={{
             heading1: ({ children }) => (
               <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight font-display text-slate-700">{children}</h1>
