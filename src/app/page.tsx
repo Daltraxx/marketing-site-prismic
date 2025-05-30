@@ -23,7 +23,5 @@ export default async function Page() {
   const client = createClient();
   const page = await client.getSingle("homepage").catch(() => notFound());
 
-  return <h1 className="text-red-700">Homepage</h1>;
-
   return <SliceZone slices={page.data.slices} components={components} />;
 }
