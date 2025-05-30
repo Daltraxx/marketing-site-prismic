@@ -30,13 +30,6 @@
             "multi": "paragraph,strong,em"
           }
         },
-        "button_text": {
-          "type": "Text",
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
-          }
-        },
         "button_link": {
           "type": "Link",
           "config": {
@@ -46,6 +39,13 @@
             "allowTargetBlank": true,
             "allowText": true,
             "repeat": false
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
           }
         },
         "image": {
