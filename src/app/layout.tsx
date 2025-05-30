@@ -3,6 +3,7 @@ import "./globals.css";
 import { nunito, nunitoSans } from "./fonts";
 import clsx from "clsx";
 import { createClient } from "@/prismicio";
+import { asImageSrc } from "@prismicio/client";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
@@ -13,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: settings.data.site_title || 'Daltraxx Inc',
     description: settings.data.meta_description || 'Daltraxx Inc. Marketing site',
     openGraph: {
-      images: [settings.data.og_image.url || '']
+      images: [{ url: asImageSrc(settings.data.og_image) ?? ''}]
     }
 
   }
