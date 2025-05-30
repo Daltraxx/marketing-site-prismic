@@ -9,7 +9,7 @@
 					{
 						"type": "heading1",
 						"content": {
-							"text": "Heading text!",
+							"text": "Productivity that flows \nwith your life.",
 							"spans": []
 						},
 						"direction": "ltr"
@@ -33,8 +33,8 @@
 				"value": "Button Text"
 			},
 			"button_link": {
-				"__TYPE__": "LinkContent",
 				"key": "eb502757-7355-4af7-8b9a-fd1442888dd2",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://google.com",
