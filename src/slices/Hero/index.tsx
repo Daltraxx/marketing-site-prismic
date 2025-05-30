@@ -19,7 +19,11 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight font-display text-slate-700">{children}</h1>
         )
       }} />
-      <PrismicRichText field={slice.primary.body} />
+      <PrismicRichText field={slice.primary.body} components={{
+        paragraph: ({ children }) => (
+          <p className="text-2xl text-center font-body font-normal leading-10 text-slate-600 mb-4 md:mb-8 max-w-md">{children}</p>
+        )
+      }} />
       <PrismicNextLink field={slice.primary.button_link}>{slice.primary.button_text}</PrismicNextLink>
       <PrismicNextImage field={slice.primary.image} />
     </section>
