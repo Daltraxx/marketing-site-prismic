@@ -26,7 +26,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       }} />
       <PrismicNextLink field={slice.primary.button_link} className="block w-fit bg-cyan-700 hover:bg-cyan-800 transition-color duration-200 ease-in-out py-3 px-12 rounded-full font-display text-white font-bold text-base tracking-wider">
         {slice.primary.button_text}</PrismicNextLink>
-      <PrismicNextImage field={slice.primary.image} className="" />
+      <PrismicNextImage field={slice.primary.image} className="drop-shadow-xl max-w-4xl w-full" />
     </section>
   );
 };
