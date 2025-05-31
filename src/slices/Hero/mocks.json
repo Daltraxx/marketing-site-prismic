@@ -35,12 +35,11 @@
 				"value": "Try for free"
 			},
 			"button_link": {
-				"key": "eb502757-7355-4af7-8b9a-fd1442888dd2",
 				"__TYPE__": "LinkContent",
+				"key": "fc37771a-ef95-4eaf-9288-47cfcc1ed4a3",
 				"value": {
 					"__TYPE__": "ExternalLink",
-					"url": "http://google.com",
-					"text": "enough"
+					"url": "http://google.com"
 				}
 			},
 			"image": {
