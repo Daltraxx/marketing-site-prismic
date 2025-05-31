@@ -1,5 +1,6 @@
 const SvgIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="136" height="25" fill="none">
+      {/* Add text element describing logo for accessibility */}
       <text>Flowrise</text>
       <path
          fill="#059669"
