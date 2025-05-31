@@ -42,9 +42,9 @@ const Features: FC<FeaturesProps> = ({ slice }) => {
   return (
     <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation} >
       <PrismicRichText field={slice.primary.heading} components={components}/>
-      <div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 max-w-5xl gap-x-8 gap-y-12 mx-auto sm:place-items-start place-items-center">
         {slice.primary.features.map((item, index) => (
-          <div key={index}>
+          <div key={index} className="max-w-xs grid sm:place-items-start place-items-center">
             <>{item.icon && icons[item.icon]}</>
             <PrismicRichText field={item.title} components={components} />
             <PrismicRichText field={item.description} components={components} />
