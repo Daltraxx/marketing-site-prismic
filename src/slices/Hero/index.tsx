@@ -3,13 +3,12 @@ import { Content } from "@prismicio/client";
 import { JSXMapSerializer, PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import Bounded from "@/components/Bounded";
+import Heading from "@/components/Heading";
 import Button from "@/components/Button";
 
 const components: JSXMapSerializer = {
   heading1: ({ children }) => (
-    <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight font-display text-slate-700">
-      {children}
-    </h1>
+    <Heading as="h1" size="lg">{children}</Heading>
   ),
   paragraph: ({ children }) => (
     <p className="text-2xl text-center font-body font-normal leading-10 text-slate-600 mb-4 md:mb-8 max-w-md">
