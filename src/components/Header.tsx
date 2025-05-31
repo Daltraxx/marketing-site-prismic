@@ -13,10 +13,12 @@ export default async function Header() {
          <div className="flex gap-4 items-center justify-between flex-col sm:flex-row">
             <Link href='/'>{settings.data.site_title}</Link>
             <nav>
-               <ul>
+               <ul className="flex">
                   {settings.data.navigation.map(({ link, label }) => (
                      <li key={label}>
-                        <PrismicNextLink field={link}>{label}</PrismicNextLink>
+                        <PrismicNextLink field={link} className="p-3">
+                           {label}
+                        </PrismicNextLink>
                      </li>
                   ))}
                </ul>
