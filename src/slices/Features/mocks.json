@@ -26,8 +26,8 @@
 								"icon",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "bargraph",
-									"type": "Select"
+									"type": "Select",
+									"value": "calendar"
 								}
 							],
 							[
@@ -71,8 +71,8 @@
 								"icon",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "clover",
-									"type": "Select"
+									"type": "Select",
+									"value": "bargraph"
 								}
 							],
 							[
@@ -116,8 +116,8 @@
 								"icon",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "bargraph",
-									"type": "Select"
+									"type": "Select",
+									"value": "clover"
 								}
 							],
 							[
@@ -161,8 +161,8 @@
 								"icon",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "bargraph",
-									"type": "Select"
+									"type": "Select",
+									"value": "hourglass"
 								}
 							],
 							[

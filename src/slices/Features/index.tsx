@@ -6,13 +6,17 @@ import Heading from "@/components/Heading";
 
 const components: JSXMapSerializer = {
   heading2: ({children}) => (
-    <Heading as="h2" size="md" className="text-center mb-12">{children}</Heading>
+    <Heading as="h2" size="md" className="text-center mb-12">
+      {children}
+    </Heading>
   ),
   heading3: ({children}) => (
-    <Heading as="h3" size="md" className="text-center mb-12">{children}</Heading>
+    <Heading as="h3" size="sm" className="mb-3 font-medium text-center sm:text-left">
+      {children}
+    </Heading>
   ),
   paragraph: ({ children }) => (
-    <p className="text-2xl font-body font-normal leading-10 text-slate-600 mb-4 md:mb-8 max-w-md">
+    <p className="text-base font-medium font-body text-slate-600 sm:text-left text-center">
       {children}
     </p>
   )
@@ -42,8 +46,8 @@ const Features: FC<FeaturesProps> = ({ slice }) => {
         {slice.primary.features.map((item, index) => (
           <div key={index}>
             <>{item.icon && icons[item.icon]}</>
-            <PrismicRichText field={item.title} />
-            <PrismicRichText field={item.description} />
+            <PrismicRichText field={item.title} components={components} />
+            <PrismicRichText field={item.description} components={components} />
           </div>
         ))}
       </div>
