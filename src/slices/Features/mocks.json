@@ -9,8 +9,10 @@
 					{
 						"type": "heading2",
 						"content": {
-							"text": "Present"
-						}
+							"text": "Robust Features",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
@@ -36,8 +38,10 @@
 										{
 											"type": "heading3",
 											"content": {
-												"text": "Rather"
-											}
+												"text": "Feature",
+												"spans": []
+											},
+											"direction": "ltr"
 										}
 									]
 								}
