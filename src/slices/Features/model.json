@@ -33,10 +33,10 @@
                   "label": "Icon",
                   "placeholder": "",
                   "options": [
-                    "Calendar",
-                    "Bargraph",
-                    "Clover",
-                    "Hourglass"
+                    "calendar",
+                    "bargraph",
+                    "clover",
+                    "hourglass"
                   ]
                 }
               },

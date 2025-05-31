@@ -41,7 +41,7 @@ const Features: FC<FeaturesProps> = ({ slice }) => {
       <div>
         {slice.primary.features.map((item, index) => (
           <div key={index}>
-            <>{item.icon}</>
+            <>{item.icon && icons[item.icon]}</>
             <PrismicRichText field={item.title} />
             <PrismicRichText field={item.description} />
           </div>
