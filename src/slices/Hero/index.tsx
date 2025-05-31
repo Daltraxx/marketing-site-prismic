@@ -3,6 +3,7 @@ import { Content } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 import Bounded from "@/components/Bounded";
+import Button from "@/components/Button";
 
 /**
  * Props for `Hero`.
@@ -26,9 +27,9 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             <p className="text-2xl text-center font-body font-normal leading-10 text-slate-600 mb-4 md:mb-8 max-w-md">{children}</p>
           )
         }} />
-        <PrismicNextLink field={slice.primary.button_link} className="block w-fit bg-cyan-700 hover:bg-cyan-800 transition-color duration-200 ease-in-out py-3 px-12 rounded-full font-display text-white font-bold text-base tracking-wider mb-8 md:mb-10">
+        <Button field={slice.primary.button_link} className="mb-8 md:mb-10">
           {slice.primary.button_text}
-        </PrismicNextLink>
+        </Button>
         <PrismicNextImage field={slice.primary.image} className="drop-shadow-xl max-w-4xl w-full" />
       </div>
     </Bounded>
