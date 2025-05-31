@@ -10,16 +10,18 @@ export default async function Header() {
 
    return (
       <Bounded as='header' className="py-4 md:py-6 lg:py-8">
-         <Link href='/'>{settings.data.site_title}</Link>
-         <nav>
-            <ul>
-               {settings.data.navigation.map(({ link, label }) => (
-                  <li key={label}>
-                     <PrismicNextLink field={link}>{label}</PrismicNextLink>
-                  </li>
-               ))}
-            </ul>
-         </nav>
+         <div className="flex gap-4 items-center justify-between flex-col sm:flex-row">
+            <Link href='/'>{settings.data.site_title}</Link>
+            <nav>
+               <ul>
+                  {settings.data.navigation.map(({ link, label }) => (
+                     <li key={label}>
+                        <PrismicNextLink field={link}>{label}</PrismicNextLink>
+                     </li>
+                  ))}
+               </ul>
+            </nav>
+         </div>
       </Bounded>
    );
 }
