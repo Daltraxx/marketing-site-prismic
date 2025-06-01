@@ -5,7 +5,7 @@ import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 
 import { createClient } from "@/prismicio";
-import { PrismicNextLink } from "@prismicio/next";
+import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
 const components: JSXMapSerializer = {
   heading2: ({children}) => (
@@ -48,6 +48,15 @@ const Testimonials: FC<TestimonialsProps> = async({ slice }) => {
         {testimonials.map((item, index) => item && (
           <div key={index}>
             <PrismicRichText field={item.data.quote} components={components} />
+            <div>
+              <PrismicNextImage width={56} height={56} field={item.data.avatar} className="rounded-full mr-4"
+                imgixParams={{ar:'1:1', fit:'crop'}}
+              />
+              <div>
+                <p>{item.data.name}</p>
+                <p>{item.data.job_title}</p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
