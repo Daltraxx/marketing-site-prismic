@@ -7,9 +7,9 @@
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
-						"type": "heading3",
+						"type": "heading2",
 						"content": {
-							"text": "Personal"
+							"text": "Motion"
 						}
 					}
 				]
@@ -20,18 +20,20 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Officia proident sit ipsum ex magna voluptate exercitation irure consequat labore exercitation cupidatat."
-						}
+							"text": "Sync your tasks and wellness to your unique rhythm.",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			},
 			"button": {
-				"__TYPE__": "LinkContent",
 				"key": "87b93ead-1ad7-4115-a22e-b1f2265012a9",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://twitter.com",
-					"text": "iron"
+					"text": "Try it free"
 				}
 			}
 		},
