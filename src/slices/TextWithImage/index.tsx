@@ -4,16 +4,17 @@ import { JSXMapSerializer, PrismicRichText, SliceComponentProps } from "@prismic
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import { PrismicNextImage } from "@prismicio/next";
+import clsx from "clsx";
 
 const components: JSXMapSerializer = {
   heading2: ({ children }) => (
-    <Heading as="h2" size="lg" className="mb-4 md:mb-8 mt-12 first:mt-0 last:mb-0">
+    <Heading as="h2" size="lg" className="">
       {children}
     </Heading>
   ),
   // create component for paragraph?
   paragraph: ({ children }) => (
-    <p className="text-2xl font-body font-normal leading-10 text-slate-600 mb-4 md:mb-8 max-w-md">
+    <p className="max-w-md text-lg font-body text-slate-600">
       {children}
     </p>
   )
@@ -31,10 +32,16 @@ export type TextWithImageProps =
 const TextWithImage: FC<TextWithImageProps> = ({ slice }) => {
   return (
     <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
-      <PrismicNextImage field={slice.primary.image} />
-      <div>
-        <PrismicRichText field={slice.primary.heading} components={components}/>
-        <PrismicRichText field={slice.primary.body} components={components}/>
+      <div className="grid gap-8 md:grid-cols-2 place-items-center">
+        <div 
+          className={clsx('grid gap-4',
+            slice.variation === 'default' && 'md:order-2'
+          )}
+        >
+          <PrismicRichText field={slice.primary.heading} components={components}/>
+          <PrismicRichText field={slice.primary.body} components={components}/>
+        </div>
+        <PrismicNextImage field={slice.primary.image} />
       </div>
     </Bounded>
   );
