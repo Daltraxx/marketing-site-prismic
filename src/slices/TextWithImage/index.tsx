@@ -33,8 +33,8 @@ const TextWithImage: FC<TextWithImageProps> = ({ slice }) => {
     <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
       <PrismicNextImage field={slice.primary.image} />
       <div>
-        <PrismicRichText field={slice.primary.heading} />
-        <PrismicRichText field={slice.primary.body} />
+        <PrismicRichText field={slice.primary.heading} components={components}/>
+        <PrismicRichText field={slice.primary.body} components={components}/>
       </div>
     </Bounded>
   );
