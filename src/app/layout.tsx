@@ -1,4 +1,4 @@
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 import "./globals.css";
 import { nunito, nunitoSans } from "./fonts";
 import clsx from "clsx";

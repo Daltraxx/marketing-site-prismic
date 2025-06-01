@@ -5,7 +5,7 @@ import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 
 import { createClient } from "@/prismicio";
-import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { PrismicNextImage } from "@prismicio/next";
 
 const components: JSXMapSerializer = {
   heading2: ({children}) => (
