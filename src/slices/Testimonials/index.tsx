@@ -44,17 +44,17 @@ const Testimonials: FC<TestimonialsProps> = async({ slice }) => {
   return (
     <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation} >
       <PrismicRichText field={slice.primary.heading} components={components}/>
-      <div>
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-8">
         {testimonials.map((item, index) => item && (
-          <div key={index} className="border bg-white shadow-lg rounded-lg px-8 md:px-14 py-10 md:py-16 grid content-between">
+          <div key={index} className="border border-gray-200 bg-white shadow-lg rounded-lg px-8 md:px-14 py-10 md:py-16 grid content-between">
             <PrismicRichText field={item.data.quote} components={components} />
-            <div>
+            <div className="flex items-center">
               <PrismicNextImage width={56} height={56} field={item.data.avatar} className="rounded-full mr-4"
                 imgixParams={{ar:'1:1', fit:'crop'}}
               />
               <div>
-                <p>{item.data.name}</p>
-                <p>{item.data.job_title}</p>
+                <p className="text-base font-medium text-slate-700">{item.data.name}</p>
+                <p className="text-base text-slate-600">{item.data.job_title}</p>
               </div>
             </div>
           </div>
