@@ -33,15 +33,15 @@ const TextWithImage: FC<TextWithImageProps> = ({ slice }) => {
   return (
     <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
       <div className="grid gap-8 md:grid-cols-2 place-items-center">
-        <div 
-          className={clsx('grid gap-4',
-            slice.variation === 'default' && 'md:order-2'
-          )}
-        >
+        <PrismicNextImage field={slice.primary.image} 
+          className={clsx(
+            'rounded-lg',
+            slice.variation === 'imageRight' && 'md:order-2'
+          )}/>
+        <div className='grid gap-4'>
           <PrismicRichText field={slice.primary.heading} components={components}/>
           <PrismicRichText field={slice.primary.body} components={components}/>
         </div>
-        <PrismicNextImage field={slice.primary.image} />
       </div>
     </Bounded>
   );
