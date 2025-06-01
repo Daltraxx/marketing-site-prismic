@@ -28,7 +28,16 @@ export type TestimonialsProps = SliceComponentProps<Content.TestimonialsSlice>;
  * Component for "Testimonials" Slices.
  */
 const Testimonials: FC<TestimonialsProps> = async ({ slice }) => {
-  
+  console.log(slice.primary.testimonial);
+
+  const client = createClient();
+  const testimonials = await Promise.all(
+    slice.primary.testimonial.map((item) => {
+      if (isFilled.contentRelationship(item.testimonial) && item.testimonial.uid) {
+        return client.getByUID('testimonial', item.testimonial.uid)
+      }
+    })
+  )
 
   return (
     <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation} >
