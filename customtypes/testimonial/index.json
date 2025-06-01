@@ -34,6 +34,14 @@
           "allowTargetBlank": true,
           "single": "paragraph,strong,em"
         }
+      },
+      "avatar": {
+        "type": "Image",
+        "config": {
+          "label": "Avatar",
+          "constraint": {},
+          "thumbnails": []
+        }
       }
     }
   }
