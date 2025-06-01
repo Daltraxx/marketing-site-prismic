@@ -3,7 +3,6 @@ import { Content } from "@prismicio/client";
 import { JSXMapSerializer, PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
-import { PrismicNextLink } from "@prismicio/next";
 import Button from "@/components/Button";
 
 const components: JSXMapSerializer = {
