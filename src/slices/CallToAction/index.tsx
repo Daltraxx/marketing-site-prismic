@@ -7,13 +7,13 @@ import Button from "@/components/Button";
 
 const components: JSXMapSerializer = {
   heading2: ({ children }) => (
-    <Heading as="h2" size="md" className="mb-4 md:mb-8 mt-12 first:mt-0 last:mb-0">
+    <Heading as="h2" size="sm" className="font-semibold text-center mb-4">
       {children}
     </Heading>
   ),
   // create component for paragraph?
   paragraph: ({ children }) => (
-    <p className="text-base font-body font-normal leading-10 text-slate-600 mb-4 md:mb-8 max-w-md">
+    <p className="text-center text-slate-600 mb-8">
       {children}
     </p>
   )
