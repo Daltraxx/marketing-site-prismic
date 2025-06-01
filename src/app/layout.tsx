@@ -2,8 +2,9 @@ import type { Metadata, ResolvingMetadata } from "next";
 import "./globals.css";
 import { nunito, nunitoSans } from "./fonts";
 import clsx from "clsx";
-import { createClient } from "@/prismicio";
+import { createClient, repositoryName } from "@/prismicio";
 import { asImageSrc } from "@prismicio/client";
+import { PrismicPreview } from "@prismicio/next";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
@@ -35,6 +36,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <div className="fixed bg-gradient-to-tr from-emerald-50 to-cyan-50 z-[-1] inset-0 opacity-50" />
+        <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
   );
