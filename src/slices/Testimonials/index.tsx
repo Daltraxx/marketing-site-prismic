@@ -5,6 +5,7 @@ import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 
 import { createClient } from "@/prismicio";
+import { PrismicNextLink } from "@prismicio/next";
 
 const components: JSXMapSerializer = {
   heading2: ({children}) => (
@@ -28,7 +29,7 @@ export type TestimonialsProps = SliceComponentProps<Content.TestimonialsSlice>;
  * Component for "Testimonials" Slices.
  */
 const Testimonials: FC<TestimonialsProps> = async ({ slice }) => {
-  console.log(slice.primary.testimonial);
+  // console.log(slice.primary.testimonial);
 
   const client = createClient();
   const testimonials = await Promise.all(
@@ -37,11 +38,20 @@ const Testimonials: FC<TestimonialsProps> = async ({ slice }) => {
         return client.getByUID('testimonial', item.testimonial.uid)
       }
     })
-  )
+  );
+
+  // console.log(testimonials);
 
   return (
     <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation} >
       <PrismicRichText field={slice.primary.heading} components={components}/>
+      <div>
+        {testimonials.map((item, index) => item && (
+          <div key={index}>
+            <PrismicRichText field={item.data.quote} components={components} />
+          </div>
+        ))}
+      </div>
     </Bounded>
   );
 };
