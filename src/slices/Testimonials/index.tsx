@@ -9,7 +9,7 @@ import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
 
 const components: JSXMapSerializer = {
   heading2: ({children}) => (
-    <Heading as="h2" size="md" className="">
+    <Heading as="h2" size="md" className="text-center mb-9 font-semibold">
       {children}
     </Heading>
   ),
