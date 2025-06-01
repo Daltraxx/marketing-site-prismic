@@ -46,7 +46,7 @@ const Testimonials: FC<TestimonialsProps> = async({ slice }) => {
       <PrismicRichText field={slice.primary.heading} components={components}/>
       <div>
         {testimonials.map((item, index) => item && (
-          <div key={index}>
+          <div key={index} className="border bg-white shadow-lg rounded-lg px-8 md:px-14 py-10 md:py-16 grid content-between">
             <PrismicRichText field={item.data.quote} components={components} />
             <div>
               <PrismicNextImage width={56} height={56} field={item.data.avatar} className="rounded-full mr-4"
