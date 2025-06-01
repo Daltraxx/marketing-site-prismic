@@ -28,17 +28,16 @@ export type TestimonialsProps = SliceComponentProps<Content.TestimonialsSlice>;
 /**
  * Component for "Testimonials" Slices.
  */
-const Testimonials: FC<TestimonialsProps> = async ({ slice }) => {
+const Testimonials: FC<TestimonialsProps> = async({ slice }) => {
   // console.log(slice.primary.testimonial);
 
   const client = createClient();
-  const testimonials = await Promise.all(
-    slice.primary.testimonial.map((item) => {
+  const testimonialsQueries = slice.primary.testimonial.map((item) => {
       if (isFilled.contentRelationship(item.testimonial) && item.testimonial.uid) {
         return client.getByUID('testimonial', item.testimonial.uid)
       }
-    })
-  );
+    });
+  const testimonials = await Promise.all(testimonialsQueries);
 
   // console.log(testimonials);
 
