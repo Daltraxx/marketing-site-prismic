@@ -30,9 +30,11 @@ export type CallToActionProps = SliceComponentProps<Content.CallToActionSlice>;
 const CallToAction: FC<CallToActionProps> = ({ slice }) => {
   return (
     <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation} >
-      <PrismicRichText field={slice.primary.heading} components={components} />
-      <PrismicRichText field={slice.primary.body} components={components} />
-      <Button field={slice.primary.button} />
+      <div className="max-w-4xl m-auto shadow-xl md:px-12 px-4 py-12 grid place-items-center rounded-lg bg-gradient-to-tr from-cyan-50 via-white to-emerald-50">
+        <PrismicRichText field={slice.primary.heading} components={components} />
+        <PrismicRichText field={slice.primary.body} components={components} />
+        <Button field={slice.primary.button} />
+      </div>
     </Bounded>
   );
 };
